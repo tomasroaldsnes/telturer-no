@@ -1,0 +1,18 @@
+{
+  "name": "teltur",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "fibers": "5.0.0",
+    "next": "11.1.2",
+    "node-sass": "5.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "1.39.2"
+  }
+}
