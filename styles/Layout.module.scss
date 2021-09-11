@@ -1,0 +1,94 @@
+@import './utils';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  background-color: $background-light;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrap {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: -4px;
+  @include respond-to('medium') {
+    margin-bottom: -8px;
+  }
+}
+.wrapBottom {
+  margin-top: -8px;
+  margin-bottom: 2rem;
+  @include respond-to('medium') {
+    margin-top: -20px;
+  }
+}
+.seperator{
+  border-color: $background-dark;
+  width: 100%;
+}
+.wave {
+  display: inline;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border: none;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-dark;
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */}
+.menuList {
+  list-style-type: none;
+ }
+.menuOpen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-dark;
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+}
+.menuItem{
+  font-family: 'Inter-Bold';
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: $primary-white;
+  margin: 2rem 0 2rem -2rem;
+  @include respond-to('medium') {
+    font-size: 3.5rem;
+    margin: 4rem 0 4rem -2rem;
+  }
+}
+.menuItem:hover{
+  cursor: pointer;
+  background: #EE0979;
+    background: -webkit-linear-gradient(to right, #EE0979 0%, #ff6a00 100%);
+    background: -moz-linear-gradient(to right, #EE0979 0%, #ff6a00 100%);
+    background: linear-gradient(to right, #EE0979 0%, #ff6a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.menuClose{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

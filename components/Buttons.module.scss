@@ -1,0 +1,106 @@
+@import '../styles/utils';
+
+.containerRow {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+}
+
+.primary {
+  background-color: $contrast;
+  border: 2px solid $contrast;
+  color: $primary-white;
+  font-family: Inter;
+  padding: 14px 32px;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.3rem 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 25px;
+}
+.secondary {
+  background-color: $primary-white;
+  border: 2px solid $primary-black;
+  color: $primary-black;
+  font-family: Inter;
+  padding: 14px 32px;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.3rem 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 25px;
+}
+.primaryDark {
+  background-color: $primary-white;
+  border: 2px solid $primary-white;
+  color: $primary-black;
+  font-family: Inter;
+  padding: 14px 32px;
+  width: auto;
+  max-width: 350px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 25px;
+}
+.secondaryDark {
+  background-color: $gray;
+  border: 2px 0.1 $gray;
+  color: $primary-white;
+  font-family: Inter;
+  padding: 14px 32px;
+  width: auto;
+  max-width: 350px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 25px;
+}
+
+.secondaryOnly{
+  @extend .secondary;
+  margin: 2rem 0;
+  max-width: 256px;
+}
+.primaryOnly{
+  @extend .primary;
+  margin: 2rem 0;
+  max-width: 256px;
+}
+.secondaryOnlyDark{
+  @extend .secondaryDark;
+  margin: 2rem 0;
+  max-width: 256px;
+}
+.primaryOnlyDark{
+  @extend .primaryDark;
+  margin: 2rem 0;
+  max-width: 256px;
+}
