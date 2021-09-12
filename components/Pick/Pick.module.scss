@@ -1,0 +1,66 @@
+@import '../../styles/utils';
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 400px;
+    justify-content: center;
+    margin: 2rem;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid;
+    background-color: $primary-black;
+    @include respond-to('medium') {
+        height: 700px;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+    align-items: center;
+    background-color: $primary-black;
+    @include respond-to('medium') {
+        margin: 2rem 0;
+    }
+}
+.imageContainer{
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.header{
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: $primary-white;
+}
+
+.text{
+    font-family: $inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $primary-white;
+}

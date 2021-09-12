@@ -12,9 +12,9 @@
 }
 
 .primary {
-  background-color: $contrast;
-  border: 2px solid $contrast;
-  color: $primary-white;
+  background-color: $primary-white;
+  border: 2px solid $primary-white;
+  color: $primary-black;
   font-family: Inter;
   padding: 14px 32px;
   width: auto;
@@ -29,9 +29,9 @@
   border-radius: 25px;
 }
 .secondary {
-  background-color: $primary-white;
-  border: 2px solid $primary-black;
-  color: $primary-black;
+  background-color: $primary-black;
+  border: 2px solid $primary-white;
+  color: $primary-white;
   font-family: Inter;
   padding: 14px 32px;
   width: auto;

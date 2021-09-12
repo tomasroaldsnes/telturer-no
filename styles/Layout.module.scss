@@ -67,14 +67,28 @@
 
 }
 .menuItem{
-  font-family: 'Inter-Bold';
-  font-size: 2rem;
+  font-family: $inter;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 4rem;
   text-align: center;
   color: $primary-white;
   margin: 2rem 0 2rem -2rem;
   @include respond-to('medium') {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    margin: 4rem 0 4rem -2rem;
+  }
+}
+.menuItemNoHover{
+  font-family: $inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 4rem;
+  text-align: center;
+  color: $primary-white;
+  margin: 2rem 0 2rem -2rem;
+  @include respond-to('medium') {
+    font-size: 2.5rem;
     margin: 4rem 0 4rem -2rem;
   }
 }

@@ -14,11 +14,15 @@
 .header{
     font-family: $inter;
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     margin-bottom: 2rem;
     text-align: start;
     color: $primary-black;
+    @include respond-to('medium') {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 .image{
     border: 1px solid black;
