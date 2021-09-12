@@ -18,8 +18,8 @@ export default function Pick() {
       </div>
       <div className={pick.content}>
         <p className={pick.header}>Norgesferie?</p>
-        <p className={pick.text}>Skal du ut på Norgesferie i sommer? Se her.</p>
-        <button className={button.primary}>Gå til reise</button>
+        <p className={pick.text}>Skal du ut å reise i sommer? Vi har samlet de beste turene.</p>
+        <button className={button.primary}>Reiseplanlegger</button>
       </div>
     </div>
   );
