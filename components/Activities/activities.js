@@ -12,9 +12,10 @@ export default function Activities() {
             src={'/img/activities/kano.png'}
             height={100}
             width={100}
-            alt={'Activity Name'}
+            loading={'lazy'}
+            alt={'Kajakk'}
           />
-          <p className={activities.text}>Kano</p>
+          <p className={activities.text}>Kajakk</p>
         </div>
         <div className={activities.imageContainer}>
           <Image
@@ -22,7 +23,8 @@ export default function Activities() {
             src={'/img/activities/surfing.png'}
             height={100}
             width={100}
-            alt={'Activity Name'}
+            loading={'lazy'}
+            alt={'Surfing'}
           />
           <p className={activities.text}>Surfing</p>
         </div>
@@ -32,7 +34,8 @@ export default function Activities() {
             src={'/img/activities/sykkel.png'}
             height={100}
             width={100}
-            alt={'Activity Name'}
+            loading={'lazy'}
+            alt={'Sykkel'}
           />
           <p className={activities.text}>Sykkel</p>
         </div>
@@ -42,7 +45,8 @@ export default function Activities() {
             src={'/img/activities/tur.png'}
             height={100}
             width={100}
-            alt={'Activity Name'}
+            loading={'lazy'}
+            alt={'Fjelltur'}
           />
           <p className={activities.text}>Fjelltur</p>
         </div>
