@@ -11,10 +11,14 @@ import Pick from '../components/Pick/pick';
 import Activities from '../components/Activities/activities';
 import Slider from '../components/Slider/slider';
 import Footer from '../components/Footer/footer';
+import Cookie from '../components/Cookie/cookie';
 import '@animated-burgers/burger-slip/dist/styles.css?2';
+import { useLocalStorage } from '../components/Utils/useLocalStorage';
 
 export default function Home() {
   const [menuOpen, openMenu] = useState(false);
+  const [hideCookie, setHideCookie] = useState(true);
+  const [consent, setConsent] = useLocalStorage("consent", "undefined");
   return (
     <div className={layout.container}>
       <Head>
@@ -33,6 +37,7 @@ export default function Home() {
         {!menuOpen ? <Slider title={'Nærheten av Ålesund'}></Slider> : null}
         <Activities/>
         <Footer/>
+        { ( consent === "undefined" && hideCookie) && <Cookie setConsent={setConsent} setHideCookie={setHideCookie}/> } 
       </main>
     </div>
   );
