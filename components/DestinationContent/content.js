@@ -3,6 +3,7 @@ import Link from 'next/link';
 import content from './Content.module.scss';
 import button from '../Buttons.module.scss';
 import InstagramEmbed from 'react-instagram-embed';
+import AdSense from 'react-adsense';
 
 export default function DestinationContent() {
   return (
@@ -28,20 +29,28 @@ export default function DestinationContent() {
       </div>
       <p className={content.headingSmall}>Fra sosiale medier:</p>
       <div className={content.instagramContainer}>
-      <InstagramEmbed
-        url="https://www.instagram.com/p/B-xW5TEJ4mC/"
-        clientAccessToken="281376926884992|RjE6Rwh8bKRcL8KT6AioC6s1CBE"
-        maxWidth={320}
-        hideCaption={false}
-        containerTagName="div"
-        protocol=""
-        injectScript
-        onLoading={() => {}}
-        onSuccess={() => {}}
-        onAfterRender={() => {}}
-        onFailure={() => {}}
-      />
+        <InstagramEmbed
+          url="https://www.instagram.com/p/B-xW5TEJ4mC/"
+          clientAccessToken="281376926884992|RjE6Rwh8bKRcL8KT6AioC6s1CBE"
+          maxWidth={320}
+          hideCaption={false}
+          containerTagName="div"
+          protocol=""
+          injectScript
+          onLoading={() => {}}
+          onSuccess={() => {}}
+          onAfterRender={() => {}}
+          onFailure={() => {}}
+        />
       </div>
+      <AdSense.Google
+        client="ca-pub-1605579254477855"
+        slot="7806394673"
+        style={{ display: 'block' }}
+        format="auto"
+        responsive="true"
+        layoutKey="-gw-1+2a-9x+5c"
+      />
     </div>
   );
 }
