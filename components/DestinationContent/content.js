@@ -45,7 +45,7 @@ export default function DestinationContent() {
       </div>
       <AdSense.Google
         client="ca-pub-1605579254477855"
-        slot="7806394673"
+        slot="1"
         style={{ display: 'block' }}
         format="auto"
         responsive="true"
