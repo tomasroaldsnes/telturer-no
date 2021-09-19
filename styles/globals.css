@@ -17,3 +17,5 @@ a {
 .burger .burger-lines,
 .burger .burger-lines:after,
 .burger .burger-lines:before { background-color: #fff; }
+
+.swiper-pagination {color: #fff;}

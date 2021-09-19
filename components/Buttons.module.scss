@@ -6,8 +6,20 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
+  
+}
+.containerRowSmall {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
   @include respond-to('medium') {
     flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+
   }
 }
 
@@ -30,7 +42,7 @@
 }
 .secondary {
   background-color: $primary-black;
-  border: 2px solid $primary-white;
+  border: 2px solid $primary-black;
   color: $primary-white;
   font-family: Inter;
   padding: 14px 32px;
@@ -45,10 +57,10 @@
   -webkit-appearance: none;
   border-radius: 25px;
 }
-.primaryDark {
-  background-color: $primary-white;
-  border: 2px solid $primary-white;
-  color: $primary-black;
+.primaryLight {
+  background-color: $primary-black;
+  border: 2px solid $primary-black;
+  color: $primary-white;
   font-family: Inter;
   padding: 14px 32px;
   width: auto;
@@ -64,10 +76,10 @@
   -webkit-appearance: none;
   border-radius: 25px;
 }
-.secondaryDark {
-  background-color: $gray;
-  border: 2px 0.1 $gray;
-  color: $primary-white;
+.secondaryLight {
+  background-color: $primary-white;
+  border: 2px solid $primary-black;
+  color: $primary-black;
   font-family: Inter;
   padding: 14px 32px;
   width: auto;
@@ -94,13 +106,13 @@
   margin: 2rem 0;
   max-width: 256px;
 }
-.secondaryOnlyDark{
-  @extend .secondaryDark;
+.secondaryOnlyLight{
+  @extend .secondaryLight;
   margin: 2rem 0;
   max-width: 256px;
 }
-.primaryOnlyDark{
-  @extend .primaryDark;
+.primaryOnlyLight{
+  @extend .primaryLight;
   margin: 2rem 0;
   max-width: 256px;
 }

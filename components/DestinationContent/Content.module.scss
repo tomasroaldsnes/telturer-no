@@ -1,0 +1,41 @@
+@import '../../styles/utils';
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 1rem;
+
+}
+.heading{
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: start;
+    color: $primary-black;
+}
+.tags{
+    font-family: $inter;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 0rem;
+    text-align: start;
+    color: $primary-black;
+}
+.headingSmall{
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: start;
+    color: $primary-black;
+}
+.buttonContainer{
+    margin-top: 1rem;
+}
+.instagramContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
