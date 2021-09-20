@@ -30,8 +30,8 @@ export default function DestinationContent() {
       <p className={content.headingSmall}>Fra sosiale medier:</p>
       <div className={content.instagramContainer}>
         <InstagramEmbed
-          url="https://www.instagram.com/p/B-xW5TEJ4mC/"
-          clientAccessToken="281376926884992|RjE6Rwh8bKRcL8KT6AioC6s1CBE"
+          url="https://www.instagram.com/p/CUDtJc0A19t/"
+          clientAccessToken="281376926884992|bff1440019cb39053da2436a370f800b"
           maxWidth={320}
           hideCaption={false}
           containerTagName="div"
