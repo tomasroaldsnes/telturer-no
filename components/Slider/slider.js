@@ -44,7 +44,7 @@ export default function Slider({ title }) {
         }}
       >
         <SwiperSlide>
-          <Link href="#">
+          <Link href="/destinations/test">
           <div className={slider.destination}>
             <div className={slider.imageContainer}>
               <Image
@@ -60,6 +60,7 @@ export default function Slider({ title }) {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
+        <Link href="/destinations/test">
           <div className={slider.destination}>
             <div className={slider.imageContainer}>
               <Image
@@ -71,8 +72,10 @@ export default function Slider({ title }) {
             </div>
             <p className={slider.text}>Molnesfjellet</p>
           </div>
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
+        <Link href="/destinations/test">
           <div className={slider.destination}>
             <div className={slider.imageContainer}>
               <Image
@@ -84,6 +87,7 @@ export default function Slider({ title }) {
             </div>
             <p className={slider.text}>Molnesfjellet</p>
           </div>
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
           <div className={slider.destination}>

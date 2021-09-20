@@ -3,7 +3,7 @@ import Link from 'next/link';
 import content from './Content.module.scss';
 import button from '../Buttons.module.scss';
 import InstagramEmbed from 'react-instagram-embed';
-import AdSense from 'react-adsense';
+//import AdSense from 'react-adsense';
 
 export default function DestinationContent() {
   return (
@@ -43,14 +43,14 @@ export default function DestinationContent() {
           onFailure={() => {}}
         />
       </div>
-      <AdSense.Google
+      {/* <AdSense.Google
         client="ca-pub-1605579254477855"
         slot="1"
         style={{ display: 'block' }}
         format="auto"
         responsive="true"
         layoutKey="-gw-1+2a-9x+5c"
-      />
+      /> */}
     </div>
   );
 }
