@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import layout from '../styles/Layout.module.scss';
 import DestinationFeed from '../components/DestinationFeed/feed'
-import AppNav from '../components/AppNav/appnav'
+import AppNav from '../components/AppNavTravels/appnav'
 
-export default function Destinations() {
+export default function Travels() {
   const [sort, setSort] = useState('Alle');
   return (
     <div className={layout.container}>

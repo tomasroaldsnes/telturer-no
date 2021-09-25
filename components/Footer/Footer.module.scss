@@ -51,15 +51,22 @@
   }
 }
 .logo {
+  margin-left: 8px;
   font-size: 28px;
   line-height: 38px;
-  font-family: 'Inter-Bold';
+  font-family: $inter;
+  font-weight: 700;
   text-decoration: none;
   color: $primary-white;
   cursor: pointer;
+  align-self: center;
 
   span {
-    font-family: $inter;
+    color: #1DEB32;
+  }
+}
+.byline{
+  font-family: $inter;
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -68,5 +75,5 @@
     margin-right: auto;
     text-align: start;
     color: $primary-white;
-  }
+    
 }

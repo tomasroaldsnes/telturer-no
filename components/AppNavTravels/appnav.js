@@ -38,102 +38,87 @@ export default function AppNav({ _sort, _setSort }) {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Parkering')}>
+        <SwiperSlide onClick={() => _setSort('Bil')}>
           <div
-            className={_sort === 'Parkering' ? appnav.sortBoxActive : appnav.sortBox}
+            className={_sort === 'Bil' ? appnav.sortBoxActive : appnav.sortBox}
           >
-            <p className={_sort === 'Parkering' ? appnav.textSelected : appnav.text}>
-              Parkering
+            <p className={_sort === 'Bil' ? appnav.textSelected : appnav.text}>
+              Bil
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Familie')}>
+        <SwiperSlide onClick={() => _setSort('Tog')}>
           <div
             className={
-              _sort === 'Familie' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === 'Tog' ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Familie' ? appnav.textSelected : appnav.text
+                _sort === 'Tog' ? appnav.textSelected : appnav.text
               }
             >
-              Familie
+              Tog
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Fjelltur')}>
+        <SwiperSlide onClick={() => _setSort('Vestland')}>
           <div
             className={
-              _sort === 'Fjelltur' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === 'Vestland' ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Fjelltur' ? appnav.textSelected : appnav.text
+                _sort === 'Vestland' ? appnav.textSelected : appnav.text
               }
             >
-              Fjelltur
+              Vestland
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Sykkel')}>
+        <SwiperSlide onClick={() => _setSort('Østland')}>
           <div
             className={
-              _sort === 'Sykkel' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === 'Østland' ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Sykkel' ? appnav.textSelected : appnav.text
+                _sort === 'Østland' ? appnav.textSelected : appnav.text
               }
             >
-              Sykkel
+              Østland
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Surfing')}>
+        <SwiperSlide onClick={() => _setSort('Nordland')}>
           <div
             className={
-              _sort === 'Surfing' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === 'Nordland' ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Surfing' ? appnav.textSelected : appnav.text
+                _sort === 'Nordland' ? appnav.textSelected : appnav.text
               }
             >
-              Surfing
+              Nordland
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Kajakk')}>
+        <SwiperSlide onClick={() => _setSort('Sørland')}>
           <div
             className={
-              _sort === 'Kajakk' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === 'Sørland' ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Kajakk' ? appnav.textSelected : appnav.text
+                _sort === 'Sørland' ? appnav.textSelected : appnav.text
               }
             >
-              Kajakk
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Perler')}>
-          <div
-            className={
-              _sort === 'Perler' ? appnav.sortBoxActive : appnav.sortBox
-            }
-          >
-            <p
-              className={
-                _sort === 'Perler' ? appnav.textSelected : appnav.text
-              }
-            >
-              Perler
+              Sørland
             </p>
           </div>
         </SwiperSlide>

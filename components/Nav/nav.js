@@ -11,7 +11,7 @@ export default function Nav({ menuOpen, openMenu }) {
           <li>
             <Link href="/">
             <a className={nav.logo} id="logo">
-              Telturer
+              Teltturer<span>.</span>
             </a>
             </Link>
           </li>

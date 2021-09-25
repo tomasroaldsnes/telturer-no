@@ -27,7 +27,7 @@
   background-color: $primary-white;
   border: 2px solid $primary-white;
   color: $primary-black;
-  font-family: Inter;
+  font-family: $inter;
   padding: 14px 32px;
   width: auto;
   text-align: center;
@@ -42,9 +42,9 @@
 }
 .secondary {
   background-color: $primary-black;
-  border: 2px solid $primary-black;
+  border: 2px solid $primary-white;
   color: $primary-white;
-  font-family: Inter;
+  font-family: $inter;
   padding: 14px 32px;
   width: auto;
   text-align: center;
@@ -61,7 +61,7 @@
   background-color: $primary-black;
   border: 2px solid $primary-black;
   color: $primary-white;
-  font-family: Inter;
+  font-family: $inter;
   padding: 14px 32px;
   width: auto;
   max-width: 350px;
@@ -80,7 +80,7 @@
   background-color: $primary-white;
   border: 2px solid $primary-black;
   color: $primary-black;
-  font-family: Inter;
+  font-family: $inter;
   padding: 14px 32px;
   width: auto;
   max-width: 350px;

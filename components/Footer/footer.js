@@ -7,9 +7,9 @@ export default function Footer() {
     <div className={footer.section}>
       <div className={footer.collection}>
         <h2 className={footer.logo}>
-          Telturer
+          Telturer<span>.</span>no
           <br />
-          <span>2021 © Tomas Roaldsnes. Alle rettigheter.</span>
+          <p className={footer.byline}>2021 © Tomas Roaldsnes. Alle rettigheter.</p>
         </h2>
       </div>
       <div className={footer.collection}>

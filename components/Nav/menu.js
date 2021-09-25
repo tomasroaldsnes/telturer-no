@@ -8,11 +8,13 @@ export default function Nav() {
     <div className={!open ? layout.menu : layout.menuOpen}>
       <ul className={layout.menuList}>
         <li className={layout.menuItem}>
-          <a>Pakkeliste</a>
+        <Link href="/destinations">
+          <a>Destinasjoner</a>
+          </Link>
         </li>
         <li className={layout.menuItem}>
-        <Link href="/templates">
-          <a>Norgesferie</a>
+        <Link href="/reiseplanlegger">
+          <a>Reiseplanlegger</a>
         </Link>
         </li>
         <li className={layout.menuItem}>

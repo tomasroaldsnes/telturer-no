@@ -19,7 +19,9 @@ export default function Pick() {
       <div className={pick.content}>
         <p className={pick.header}>Norgesferie?</p>
         <p className={pick.text}>Skal du ut å reise i sommer? Vi har samlet de beste turene.</p>
+        <Link href={"/reiseplanlegger"}>
         <button className={button.primary}>Reiseplanlegger</button>
+        </Link>
       </div>
     </div>
   );
