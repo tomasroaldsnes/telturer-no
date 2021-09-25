@@ -15,7 +15,19 @@ import Cookie from '../components/Cookie/cookie';
 import '@animated-burgers/burger-slip/dist/styles.css?2';
 import { useLocalStorage } from '../components/Utils/useLocalStorage';
 
-export default function Home() {
+export async function getStaticProps() {
+
+  const res_dest = await fetch(`https://telturer.herokuapp.com/destinations`);
+  const destinations = await res_dest.json();
+
+  return {
+      props: {
+          destinations,
+      },
+  };
+}
+
+export default function Home({ destinations }) {
   const [menuOpen, openMenu] = useState(false);
   const [utilizesNav, useNav] = useState(true);
   const [hideCookie, setHideCookie] = useState(true);
@@ -59,10 +71,10 @@ export default function Home() {
         <Nav menuOpen={menuOpen} openMenu={openMenu}></Nav>
         {menuOpen ? <Menu open={menuOpen} /> : null}
         {!menuOpen ? <Hero /> : null}
-        {!menuOpen ? <Slider title={'Nærheten av Oslo'}></Slider> : null}
-        {!menuOpen ? <Slider title={'Nærheten av Bergen'}></Slider> : null}
+        {!menuOpen ? <Slider title={'Nærheten av Oslo'} destinations={destinations}></Slider> : null}
+        {!menuOpen ? <Slider title={'Nærheten av Bergen'} destinations={destinations}></Slider> : null}
         <Pick />
-        {!menuOpen ? <Slider title={'Nærheten av Ålesund'}></Slider> : null}
+        {!menuOpen ? <Slider title={'Nærheten av Ålesund'} destinations={destinations}></Slider> : null}
         <Activities />
         <Footer />
         {consent === 'undefined' && hideCookie && (

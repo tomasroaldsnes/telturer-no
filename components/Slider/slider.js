@@ -10,7 +10,7 @@ import SwiperCore, { Pagination, Mousewheel } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Pagination, Mousewheel]);
 
-export default function Slider({ title }) {
+export default function Slider({ title, destinations }) {
   return (
     <div className={slider.container}>
       <h2 className={slider.header}>{title}</h2>
@@ -43,117 +43,24 @@ export default function Slider({ title }) {
           },
         }}
       >
+       { destinations.map((destination) => (
         <SwiperSlide>
-          <Link href="/destinations/test">
+          <Link href="/">
           <div className={slider.destination}>
             <div className={slider.imageContainer}>
               <Image
                 className={slider.image}
-                src={'/img/locations/molnes.jpg'}
+                src={'https://telturer.herokuapp.com' + destination.Teaser.formats.small.url}
                 layout="fill"
                 objectFit="cover"
                 loading='lazy'
               />
             </div>
-            <p className={slider.text}>Molnesfjellet</p>
+            <p className={slider.text}>{destination.Title}</p>
           </div>
           </Link>
         </SwiperSlide>
-        <SwiperSlide>
-        <Link href="/destinations/test">
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-        <Link href="/destinations/test">
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={'/img/locations/molnes.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <p className={slider.text}>Molnesfjellet</p>
-          </div>
-        </SwiperSlide>
+       ))} 
       </Swiper>
     </div>
   );

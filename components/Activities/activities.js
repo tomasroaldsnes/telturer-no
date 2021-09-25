@@ -7,6 +7,7 @@ export default function Activities() {
     <div className={activities.section}>
       <h2 className={activities.header}>For de aktive</h2>
       <div className={activities.container}>
+        <Link href={{ pathname: '/destinations', query: { keyword: 'Kajakk' } }}>
         <div className={activities.imageContainer}>
           <Image
             src={'/img/activities/kano.png'}
@@ -17,6 +18,8 @@ export default function Activities() {
           />
           <p className={activities.text}>Kajakk</p>
         </div>
+        </Link>
+        <Link href={{ pathname: '/destinations', query: { keyword: 'Surfing' } }}>
         <div className={activities.imageContainer}>
           <Image
             className={activities.image}
@@ -28,6 +31,8 @@ export default function Activities() {
           />
           <p className={activities.text}>Surfing</p>
         </div>
+        </Link>
+        <Link href={{ pathname: '/destinations', query: { keyword: 'Sykkel' } }}>
         <div className={activities.imageContainer}>
           <Image
             className={activities.image}
@@ -39,6 +44,8 @@ export default function Activities() {
           />
           <p className={activities.text}>Sykkel</p>
         </div>
+        </Link>
+        <Link href={{ pathname: '/destinations', query: { keyword: 'Fjelltur' } }}>
         <div className={activities.imageContainer}>
           <Image
             className={activities.image}
@@ -50,6 +57,7 @@ export default function Activities() {
           />
           <p className={activities.text}>Fjelltur</p>
         </div>
+        </Link>
       </div>
     </div>
   );

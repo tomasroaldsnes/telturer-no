@@ -1,50 +1,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import slider from './TopSlider.module.scss';
 import 'swiper/css';
-import "swiper/css/pagination"
+import 'swiper/css/pagination';
 
 import SwiperCore, { Pagination, Mousewheel } from 'swiper';
 
 // install Swiper modules
 SwiperCore.use([Pagination, Mousewheel]);
 
-export default function Slider() {
+export default function Slider({ destination }) {
+  destination.Images.map((image) => (console.log(image.url)))
   return (
     <div className={slider.container}>
       <Swiper
         className={slider.swiper}
         direction={'horizontal'}
         pagination={{
-          "type": "fraction"
+          type: 'fraction',
         }}
         grabCursor={false}
         mousewheel={{
           releaseOnEdges: true,
-          forceToAxis: true
+          forceToAxis: true,
         }}
       >
-        <SwiperSlide>
+        {destination.Images.map((image) => (
+          <SwiperSlide>
             <div className={slider.imageContainer}>
               <Image
-                src={'/img/locations/molnes.jpg'}
+                src={'https://telturer.herokuapp.com' + image.url}
                 layout="fill"
                 objectFit="cover"
-                loading='lazy'
+                loading="lazy"
               />
             </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className={slider.imageContainer}>
-              <Image
-                src={'/img/locations/cover.jpg'}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-        </SwiperSlide>
-        </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
