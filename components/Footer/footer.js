@@ -17,14 +17,13 @@ export default function Footer() {
           <span>Om Telturer.no</span>
         </strong>
         <p className={footer.link}>Kontakt</p>
-        <p className={footer.link}>Hvorfor</p>
       </div>
       <div className={footer.collection}>
         <strong className={footer.link}>
           <span>Lovligheter</span>
         </strong>
-        <p className={footer.link}>Personvernsærklering</p>
-        <p className={footer.link}>Chill på data</p>
+        <Link href="/personvern"><p className={footer.link}>Personvernsærklering</p></Link>
+        <Link href="/personvern"><p className={footer.link}>Chill på data</p></Link>
       </div>
       <div className={footer.collectionSocial}>
         <Image
@@ -34,13 +33,14 @@ export default function Footer() {
           width={48}
           loading={'lazy'}
         />
+        <Link href="https://www.instagram.com/teltturer/" passHref={true}>
         <Image
           className={footer.social}
           src={'/img/instagram.svg?1'}
           height={48}
           width={48}
           loading={'lazy'}
-        />
+        /></Link>
       </div>
     </div>
   );
