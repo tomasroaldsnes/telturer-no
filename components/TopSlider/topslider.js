@@ -11,7 +11,6 @@ import SwiperCore, { Pagination, Mousewheel } from 'swiper';
 SwiperCore.use([Pagination, Mousewheel]);
 
 export default function Slider({ destination }) {
-  destination.Images.map((image) => (console.log(image.url)))
   return (
     <div className={slider.container}>
       <Swiper
@@ -26,11 +25,11 @@ export default function Slider({ destination }) {
           forceToAxis: true,
         }}
       >
-        {destination.Images.map((image) => (
+        {destination.images.map((image) => (
           <SwiperSlide>
             <div className={slider.imageContainer}>
               <Image
-                src={'https://telturer.herokuapp.com' + image.url}
+                src={image.url}
                 layout="fill"
                 objectFit="cover"
                 loading="lazy"

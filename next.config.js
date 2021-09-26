@@ -3,7 +3,7 @@
  */
  const nextConfig = {
     images: {
-        domains: ['telturer.herokuapp.com'],
+        domains: ['telturer.herokuapp.com', 'telturer.s3.eu-west-1.amazonaws.com'],
     },
   }
   

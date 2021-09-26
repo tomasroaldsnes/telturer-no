@@ -45,18 +45,18 @@ export default function Slider({ title, destinations }) {
       >
        { destinations.map((destination) => (
         <SwiperSlide>
-          <Link href="/">
+          <Link href={"/destinations/" + destination.id}>
           <div className={slider.destination}>
             <div className={slider.imageContainer}>
               <Image
                 className={slider.image}
-                src={'https://telturer.herokuapp.com' + destination.Teaser.formats.small.url}
+                src={destination.teaser.formats.small.url}
                 layout="fill"
                 objectFit="cover"
                 loading='lazy'
               />
             </div>
-            <p className={slider.text}>{destination.Title}</p>
+            <p className={slider.text}>{destination.title}</p>
           </div>
           </Link>
         </SwiperSlide>

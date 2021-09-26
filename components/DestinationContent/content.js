@@ -8,7 +8,7 @@ import InstagramEmbed from 'react-instagram-embed';
 export default function DestinationContent({ destination }) {
   return (
     <div className={content.container}>
-      <h2 className={content.heading}>{destination.Title}</h2>
+      <h2 className={content.heading}>{destination.title}</h2>
       <p className={content.tags}>
       {destination.tags}
       </p>
