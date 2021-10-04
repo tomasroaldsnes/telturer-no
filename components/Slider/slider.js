@@ -10,6 +10,25 @@ import SwiperCore, { Pagination, Mousewheel } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Pagination, Mousewheel]);
 
+const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#333" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#333" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#333" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str)
+
 export default function Slider({ title, destinations }) {
   return (
     <div className={slider.container}>
@@ -22,7 +41,7 @@ export default function Slider({ title, destinations }) {
         grabCursor={false}
         mousewheel={{
           releaseOnEdges: true,
-          forceToAxis: true
+          forceToAxis: true,
         }}
         breakpoints={{
           640: {
@@ -43,24 +62,26 @@ export default function Slider({ title, destinations }) {
           },
         }}
       >
-       { destinations.map((destination) => (
-        <SwiperSlide>
-          <Link href={"/destinations/" + destination.id}>
-          <div className={slider.destination}>
-            <div className={slider.imageContainer}>
-              <Image
-                className={slider.image}
-                src={destination.teaser.formats.small.url}
-                layout="fill"
-                objectFit="cover"
-                loading='lazy'
-              />
-            </div>
-            <p className={slider.text}>{destination.title}</p>
-          </div>
-          </Link>
-        </SwiperSlide>
-       ))} 
+        {destinations.map((destination) => (
+          <SwiperSlide key={destination.id}>
+            <Link href={'/destinations/' + destination.id}>
+              <div className={slider.destination}>
+                <div className={slider.imageContainer}>
+                    <Image
+                      className={slider.image}
+                      src={destination.teaser.formats.small.url}
+                      layout="fill"
+                      objectFit="cover"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+                    />
+                </div>
+                <p className={slider.text}>{destination.title}</p>
+              </div>
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
