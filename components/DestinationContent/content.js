@@ -6,11 +6,11 @@ import InstagramEmbed from 'react-instagram-embed';
 //import AdSense from 'react-adsense';
 
 export default function DestinationContent({ destination }) {
-  destination.tags = destination.tags.replaceAll('|', '·');
+  const tag = destination.tags.replaceAll('|', '·');
   return (
     <div className={content.container}>
       <h2 className={content.heading}>{destination.title}</h2>
-      <p className={content.tags}>{destination.tags}</p>
+      <p className={content.tags}>{tag}</p>
       <p className={content.headingSmall}>Veibeskrivelse:</p>
       <div className={button.containerRowSmall}>
         <a href={destination.ut} className={button.secondaryLight}>
