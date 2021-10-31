@@ -12,7 +12,7 @@ import Activities from '../components/Activities/activities';
 import Slider from '../components/Slider/slider';
 import Footer from '../components/Footer/footer';
 import Cookie from '../components/Cookie/cookie';
-import '@animated-burgers/burger-slip/dist/styles.css?2';
+import '@animated-burgers/burger-slip/dist/styles.css';
 import { useLocalStorage } from '../components/Utils/useLocalStorage';
 
 export async function getStaticProps() {
