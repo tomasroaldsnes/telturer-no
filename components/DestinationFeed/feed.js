@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import feed from './Feed.module.scss';
 
@@ -19,7 +20,7 @@ export default function Feed({ destinations }) {
           </div>
           <p className={feed.text}>{destination.title}</p>
           <p className={feed.tags}>
-          {destination.tags}
+          {destination.tags.replaceAll('|', '·')}
           </p>
         </div>
       </Link>

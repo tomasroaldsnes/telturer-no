@@ -29,7 +29,13 @@ const toBase64 = (str) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
 
-export default function Slider({ title, destinations }) {
+export default function Slider({ title, destinations, filter, keyword }) {
+  if(filter === "city"){
+    destinations = destinations.filter(d => d.city === keyword);
+  }
+  if(filter === "tags"){
+    destinations = destinations.filter(d => d.tags.includes(keyword));
+  }
   return (
     <div className={slider.container}>
       <h2 className={slider.header}>{title}</h2>

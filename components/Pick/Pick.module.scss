@@ -8,10 +8,12 @@
     margin: 2rem;
     align-items: center;
     border-radius: 8px;
-    border: 1px solid;
+    border: 1px solid $primary-white;
     background-color: $primary-black;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.16));
     @include respond-to('medium') {
         height: 700px;
+        width: 63%;
     }
 }
 .content{
@@ -28,17 +30,15 @@
 }
 .imageContainer{
     position: relative;
-    border-radius: 8px;
-    border: 1px solid transparent;
     height: 100%;
     width: 100%;
-    
+    object-fit: cover;
 }
 
 .image{
     width: 100%;
     height: auto;
-    position: relative;
+    border-radius: 8px 8px 0 0;
 }
 
 .header{

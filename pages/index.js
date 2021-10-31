@@ -71,10 +71,10 @@ export default function Home({ destinations }) {
         <Nav menuOpen={menuOpen} openMenu={openMenu}></Nav>
         {menuOpen ? <Menu open={menuOpen} /> : null}
         {!menuOpen ? <Hero /> : null}
-        {!menuOpen ? <Slider title={'Nærheten av Oslo'} destinations={destinations}></Slider> : null}
-        {!menuOpen ? <Slider title={'Nærheten av Bergen'} destinations={destinations}></Slider> : null}
+        {!menuOpen ? <Slider title={'Nærheten av Oslo'} filter={'city'} keyword={'Oslo'} destinations={destinations}></Slider> : null}
+        {!menuOpen ? <Slider title={'De beste turene'} filter={'tags'} keyword={'Langtur'} destinations={destinations}></Slider> : null}
         <Pick />
-        {!menuOpen ? <Slider title={'Nærheten av Ålesund'} destinations={destinations}></Slider> : null}
+        {!menuOpen ? <Slider title={'Enkelt å parkere'} filter={'tags'} keyword={'Parkering'} destinations={destinations}></Slider> : null}
         <Activities />
         <Footer />
         {consent === 'undefined' && hideCookie && (

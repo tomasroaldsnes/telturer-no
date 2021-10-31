@@ -9,7 +9,7 @@ export default function Pick() {
       <div className={pick.imageContainer}>
         <Image
           className={pick.image}
-          src={'/img/locations/cover-desktop.jpg'}
+          src={'/img/winter.jpg'}
           layout={'fill'}
           alt={'Trip Name'}
           objectFit="cover"
@@ -17,10 +17,10 @@ export default function Pick() {
         />
       </div>
       <div className={pick.content}>
-        <p className={pick.header}>Norgesferie?</p>
-        <p className={pick.text}>Skal du ut å reise i sommer? Vi har samlet de beste turene.</p>
-        <Link href={"/reiseplanlegger"}>
-        <button className={button.primary}>Reiseplanlegger</button>
+        <p className={pick.header}>Vinteridyll?</p>
+        <p className={pick.text}>Skal du på fjellet i vinter? Vi har samlet de beste turene.</p>
+        <Link href={"/destinasjoner"}>
+        <button className={button.primary}>Se destinasjoner</button>
         </Link>
       </div>
     </div>
