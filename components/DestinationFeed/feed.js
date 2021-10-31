@@ -8,7 +8,7 @@ export default function Feed({ destinations }) {
   let _destinations = destinations;
   for (var i in _destinations) {
     if (_destinations[i].tags)
-      _destinations[i].tags = _destinations[i].tags.replace(/|/g, '·');;
+      _destinations[i].tags = _destinations[i].tags.replace(new RegExp('\\|', 'g'), '·');
   }
   return (
     <div className={feed.container}>
