@@ -4,6 +4,9 @@ import Link from 'next/link';
 import feed from './Feed.module.scss';
 
 export default function Feed({ destinations }) {
+  for (var i in destinations) {
+    destinations[i].tags = destinations[i].tags.replaceAll('|', '·');
+  }
   return (
     <div className={feed.container}>
       {destinations.map((destination) => (
@@ -20,7 +23,7 @@ export default function Feed({ destinations }) {
           </div>
           <p className={feed.text}>{destination.title}</p>
           <p className={feed.tags}>
-          {destination.tags.replaceAll('|', '·')}
+          {destination.tags}
           </p>
         </div>
       </Link>

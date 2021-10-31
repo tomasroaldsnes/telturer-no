@@ -6,6 +6,7 @@ import InstagramEmbed from 'react-instagram-embed';
 //import AdSense from 'react-adsense';
 
 export default function DestinationContent({ destination }) {
+  destination.tags = destination.tags.replaceAll('|', '·');
   return (
     <div className={content.container}>
       <h2 className={content.heading}>{destination.title}</h2>
