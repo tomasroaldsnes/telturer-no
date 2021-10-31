@@ -1,4 +1,4 @@
-import '../styles/globals.css?9'
+import '../styles/globals.css'
 import Router from "next/router";
 import NProgress from 'nprogress';
 import "../styles/nprogress.css";
