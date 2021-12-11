@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import layout from '../styles/Layout.module.scss';
 import DestinationFeed from '../components/DestinationFeed/feed';
@@ -17,17 +17,27 @@ export async function getStaticProps() {
 }
 export default function Destinations({ destinations }) {
   const param = useRouter();
-  let query_state = 'Alle';
+  const [sort, setSort] = useState('Alle');
+  const [checkParam, setCheckParam] = useState(true);
   let show_destinations = destinations;
-  if (param.query && param.query.keyword) {
-    query_state = param.query.keyword;
-  }
-  const [sort, setSort] = useState(query_state);
+
   if (sort != 'Alle') {
     show_destinations = destinations.filter((d) => d.tags.includes(sort));
   } else {
     show_destinations = destinations;
   }
+
+  if (checkParam && param.query && param.query.keyword) {
+    show_destinations = destinations.filter((d) =>
+      d.tags.includes(param.query.keyword)
+    );
+    if (checkParam) {
+      setSort(param.query.keyword);
+      setCheckParam(false);
+    }
+  }
+
+  console.log(sort);
 
   return (
     <>

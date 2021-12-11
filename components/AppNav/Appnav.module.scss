@@ -1,52 +1,53 @@
 @import '../../styles/utils';
-.container{
-    background-color: $primary-white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 2rem 0 0 1rem;
-    overflow: hidden;
-    border-bottom: 1px solid rgb(157, 157, 157);
-    backdrop-filter: blur(8px) !important;
-    box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 8%) 0px 4px 12px !important;
+.container {
+  background-color: $primary-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem 0 0 1rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(157, 157, 157);
+  backdrop-filter: blur(8px) !important;
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 8%) 0px 4px 12px !important;
 }
-.icon{
-    margin-bottom: 0.75rem;
-    cursor: pointer;
+.icon {
+  margin-bottom: 0.75rem;
+  cursor: pointer;
 }
-.slider{
-    width: 100%;
-    overflow-x: hidden;
+.slider {
+  width: 100%;
+  overflow-x: hidden;
 }
-.sortBox{
-    width: 100%;
-    margin-bottom: -6px;
+.sortBox {
+  width: 100%;
+  margin-bottom: -6px;
 }
-.sortBoxActive{
-    border-bottom: 2px solid #000;
-    width: 100%;
+.sortBoxActive {
+  border-bottom: 2px solid #000;
+  width: 100%;
 }
-.text{
-    font-family: $inter;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 0.5rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: $primary-black;
-    opacity: 50%;
+.text {
+  font-family: $inter;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 0.5rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: $primary-black;
+  opacity: 50%;
+  cursor: pointer;
 }
-.textSelected{
-    font-family: $inter;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 0.5rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: $primary-black;
+.textSelected {
+  font-family: $inter;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 0.5rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: $primary-black;
 }

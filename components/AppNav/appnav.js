@@ -38,11 +38,32 @@ export default function AppNav({ _sort, _setSort }) {
             </p>
           </div>
         </SwiperSlide>
+        <SwiperSlide onClick={() => _setSort('Topptur')}>
+          <div
+            className={
+              _sort === 'Topptur' ? appnav.sortBoxActive : appnav.sortBox
+            }
+          >
+            <p
+              className={
+                _sort === 'Topptur' ? appnav.textSelected : appnav.text
+              }
+            >
+              Toppturer
+            </p>
+          </div>
+        </SwiperSlide>
         <SwiperSlide onClick={() => _setSort('Parkering')}>
           <div
-            className={_sort === 'Parkering' ? appnav.sortBoxActive : appnav.sortBox}
+            className={
+              _sort === 'Parkering' ? appnav.sortBoxActive : appnav.sortBox
+            }
           >
-            <p className={_sort === 'Parkering' ? appnav.textSelected : appnav.text}>
+            <p
+              className={
+                _sort === 'Parkering' ? appnav.textSelected : appnav.text
+              }
+            >
               Parkering
             </p>
           </div>
@@ -84,9 +105,7 @@ export default function AppNav({ _sort, _setSort }) {
             }
           >
             <p
-              className={
-                _sort === 'Sykkel' ? appnav.textSelected : appnav.text
-              }
+              className={_sort === 'Sykkel' ? appnav.textSelected : appnav.text}
             >
               Sykkel
             </p>
@@ -114,9 +133,7 @@ export default function AppNav({ _sort, _setSort }) {
             }
           >
             <p
-              className={
-                _sort === 'Kajakk' ? appnav.textSelected : appnav.text
-              }
+              className={_sort === 'Kajakk' ? appnav.textSelected : appnav.text}
             >
               Kajakk
             </p>
@@ -129,9 +146,7 @@ export default function AppNav({ _sort, _setSort }) {
             }
           >
             <p
-              className={
-                _sort === 'Perler' ? appnav.textSelected : appnav.text
-              }
+              className={_sort === 'Perler' ? appnav.textSelected : appnav.text}
             >
               Perler
             </p>

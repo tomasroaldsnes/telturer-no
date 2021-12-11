@@ -13,14 +13,16 @@ export default function Pick() {
           layout={'fill'}
           alt={'Trip Name'}
           objectFit="cover"
-          loading='lazy'
+          loading="lazy"
         />
       </div>
       <div className={pick.content}>
         <p className={pick.header}>Vinteridyll?</p>
-        <p className={pick.text}>Skal du på fjellet i vinter? Vi har samlet de beste turene.</p>
-        <Link href={"/destinasjoner"}>
-        <button className={button.primary}>Se destinasjoner</button>
+        <p className={pick.text}>
+          Skal du på fjellet i vinter? Vi har samlet de beste turene.
+        </p>
+        <Link href={'/destinations/destinations?keyword=Topptur'}>
+          <button className={button.primary}>Se destinasjoner</button>
         </Link>
       </div>
     </div>
