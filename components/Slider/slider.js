@@ -22,19 +22,19 @@ const shimmer = (w, h) => `
   <rect width="${w}" height="${h}" fill="#333" />
   <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-</svg>`
+</svg>`;
 
 const toBase64 = (str) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
+    : window.btoa(str);
 
 export default function Slider({ title, destinations, filter, keyword }) {
-  if(filter === "city"){
-    destinations = destinations.filter(d => d.city === keyword);
+  if (filter === 'city') {
+    destinations = destinations.filter((d) => d.city === keyword);
   }
-  if(filter === "tags"){
-    destinations = destinations.filter(d => d.tags.includes(keyword));
+  if (filter === 'tags') {
+    destinations = destinations.filter((d) => d.tags.includes(keyword));
   }
   return (
     <div className={slider.container}>
@@ -73,15 +73,18 @@ export default function Slider({ title, destinations, filter, keyword }) {
             <Link href={'/destinations/' + destination.id}>
               <div className={slider.destination}>
                 <div className={slider.imageContainer}>
-                    <Image
-                      className={slider.image}
-                      src={destination.teaser.formats.small.url}
-                      layout="fill"
-                      objectFit="cover"
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-                    />
+                  <Image
+                    className={slider.image}
+                    src={destination.teaser.formats.small.url}
+                    layout="fill"
+                    objectFit="cover"
+                    loading="lazy"
+                    placeholder="blur"
+                    alt={destination.title}
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                      shimmer(700, 475)
+                    )}`}
+                  />
                 </div>
                 <p className={slider.text}>{destination.title}</p>
               </div>

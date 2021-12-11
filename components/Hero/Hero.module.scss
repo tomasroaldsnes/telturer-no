@@ -1,50 +1,55 @@
 @import '../../styles/utils';
-.container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 80vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../public/img/cover-3.jpg);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    margin-top: -2rem;
-    margin-bottom: 0.1rem;
-    @include respond-to('medium') {
-        height: 90vh;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../public/img/cover-small.webp),
+    url(../../public/img/cover-small.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin-top: -2rem;
+  margin-bottom: 0.1rem;
+  @include respond-to('medium') {
+    height: 90vh;
+  }
 }
 
-.overlay{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.091) 11.46%, rgba(0, 0, 0, 0.221) 70.38%, #000000 100%);
-    z-index: 2;
-    height: 100%;
-    width: 100%;
+.overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.091) 11.46%,
+    rgba(0, 0, 0, 0.221) 70.38%,
+    #000000 100%
+  );
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.text{
-    font-family: $inter;
-    font-weight: 800;
-    font-size: 3rem;
-    line-height: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: $primary-white;
-    
+.text {
+  font-family: $inter;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: $primary-white;
 }

@@ -1,0 +1,29 @@
+{
+  "short_name": "Teltturer",
+  "name": "Teltturer.no - de beste stedene for telt- og hengekøyeturer i Norge",
+  "icons": [
+    {
+      "src": "/log.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1deb32",
+  "description": "Teltturer.no gir deg en oversikt over Norges beste steder å sove i naturen. Her finner du de beste telt- og hengekøyeturene i Norge. Planlegg Norgesferien med reisebeskrivelser, parkering og aktiviteter der du skal telte.",
+  "screenshots": [
+    {
+      "src": "/img/screenshot1.png",
+      "type": "image/png",
+      "sizes": "3550x1326"
+    },
+    {
+      "src": "/img/screenshot2.jpg",
+      "type": "image/jpg",
+      "sizes": "3574x1886"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import layout from '../styles/Layout.module.scss';
 import DestinationFeed from '../components/DestinationFeed/feed';
 import AppNav from '../components/AppNav/appnav';
@@ -29,11 +30,28 @@ export default function Destinations({ destinations }) {
   }
 
   return (
-    <div className={layout.container}>
-      <main>
-        <AppNav _sort={sort} _setSort={setSort} />
-        <DestinationFeed destinations={show_destinations} />
-      </main>
-    </div>
+    <>
+      <Head>
+        <title>Destinasjoner</title>
+        <meta
+          name="description"
+          content="De råeste stedene for telt, hengekøye, paddling, sykkeltur, surfing, kano og toppturer i Norge."
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Destinasjoner" />
+        <meta
+          property="og:description"
+          content="De råeste stedene for telt, hengekøye, paddling, sykkeltur, surfing, kano og toppturer i Norge."
+        />
+        <meta property="og:url" content="https://teltturer.no/destinations" />
+        <meta property="og:type" content="website" />
+      </Head>
+      <div className={layout.container}>
+        <main>
+          <AppNav _sort={sort} _setSort={setSort} />
+          <DestinationFeed destinations={show_destinations} />
+        </main>
+      </div>
+    </>
   );
 }
