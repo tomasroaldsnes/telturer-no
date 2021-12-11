@@ -21,7 +21,7 @@ export default function Pick() {
         <p className={pick.text}>
           Skal du på fjellet i vinter? Vi har samlet de beste turene.
         </p>
-        <Link href={'/destinations/destinations?keyword=Topptur'}>
+        <Link href={'/destinations?keyword=Topptur'}>
           <button className={button.primary}>Se destinasjoner</button>
         </Link>
       </div>
