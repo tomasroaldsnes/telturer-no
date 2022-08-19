@@ -76,12 +76,12 @@ export default function Slider({ title, destinations, filter, keyword }) {
                 destination.id +
                 "/" +
                 destination.title
+                  .toString()
                   .toLowerCase()
                   .replaceAll(" ", "-")
                   .replaceAll("å", "aa")
                   .replaceAll("æ", "ae")
                   .replaceAll("ø", "o")
-                  .toString()
               }
             >
               <div className={slider.destination}>

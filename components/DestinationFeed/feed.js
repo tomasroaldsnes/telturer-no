@@ -21,12 +21,12 @@ export default function Feed({ destinations }) {
             destination.id +
             "/" +
             destination.title
+              .toString()
               .toLowerCase()
               .replaceAll(" ", "-")
               .replaceAll("å", "aa")
               .replaceAll("æ", "ae")
               .replaceAll("ø", "o")
-              .toString()
           }
         >
           <div className={feed.destination}>

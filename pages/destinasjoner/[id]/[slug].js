@@ -11,12 +11,12 @@ export async function getStaticPaths() {
   const paths = destinations.map((destination) => ({
     params: {
       slug: destination.title
+        .toString()
         .toLowerCase()
         .replaceAll(" ", "-")
         .replaceAll("å", "aa")
         .replaceAll("æ", "ae")
-        .replaceAll("ø", "o")
-        .toString(),
+        .replaceAll("ø", "o"),
       id: destination.id.toString(),
     },
   }));
