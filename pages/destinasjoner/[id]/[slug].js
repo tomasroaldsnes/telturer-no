@@ -13,14 +13,10 @@ export async function getStaticPaths() {
       slug: destination.title
         .toString()
         .toLowerCase()
-        .toString()
-        .replaceAll(" ", "-")
-        .toString()
-        .replaceAll("å", "aa")
-        .toString()
-        .replaceAll("æ", "ae")
-        .toString()
-        .replaceAll("ø", "o"),
+        .replace("/ /g", "-")
+        .replace("/å/g", "aa")
+        .replace("/æ/g", "ae")
+        .replace("/ø/g", "o"),
       id: destination.id.toString(),
     },
   }));
