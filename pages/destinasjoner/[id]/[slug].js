@@ -10,13 +10,7 @@ export async function getStaticPaths() {
 
   const paths = destinations.map((destination) => ({
     params: {
-      slug: destination.title
-        .toString()
-        .toLowerCase()
-        .replace("/ /g", "-")
-        .replace("/å/g", "aa")
-        .replace("/æ/g", "ae")
-        .replace("/ø/g", "o"),
+      slug: destination.slug,
       id: destination.id.toString(),
     },
   }));

@@ -71,18 +71,7 @@ export default function Slider({ title, destinations, filter, keyword }) {
         {destinations.map((destination) => (
           <SwiperSlide key={destination.id}>
             <Link
-              href={
-                "/destinasjoner/" +
-                destination.id +
-                "/" +
-                destination.title
-                  .toString()
-                  .toLowerCase()
-                  .replaceAll(" ", "-")
-                  .replaceAll("å", "aa")
-                  .replaceAll("æ", "ae")
-                  .replaceAll("ø", "o")
-              }
+              href={"/destinasjoner/" + destination.id + "/" + destination.slug}
             >
               <div className={slider.destination}>
                 <div className={slider.imageContainer}>

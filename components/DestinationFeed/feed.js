@@ -16,18 +16,7 @@ export default function Feed({ destinations }) {
     <div className={feed.container}>
       {_destinations.map((destination) => (
         <Link
-          href={
-            "/destinasjoner/" +
-            destination.id +
-            "/" +
-            destination.title
-              .toString()
-              .toLowerCase()
-              .replaceAll(" ", "-")
-              .replaceAll("å", "aa")
-              .replaceAll("æ", "ae")
-              .replaceAll("ø", "o")
-          }
+          href={"/destinasjoner/" + destination.id + "/" + destination.slug}
         >
           <div className={feed.destination}>
             <div className={feed.imageContainer}>
