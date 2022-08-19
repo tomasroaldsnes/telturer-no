@@ -1,17 +1,17 @@
-import Head from 'next/head';
-import { useState } from 'react';
-import Script from 'next/script';
-import layout from '../styles/Layout.module.scss';
-import Nav from '../components/Nav/nav';
-import Menu from '../components/Nav/menu';
-import Hero from '../components/Hero/hero';
-import Pick from '../components/Pick/pick';
-import Activities from '../components/Activities/activities';
-import Slider from '../components/Slider/slider';
-import Footer from '../components/Footer/footer';
-import Cookie from '../components/Cookie/cookie';
-import '@animated-burgers/burger-slip/dist/styles.css';
-import { useLocalStorage } from '../components/Utils/useLocalStorage';
+import Head from "next/head";
+import { useState } from "react";
+import Script from "next/script";
+import layout from "../styles/Layout.module.scss";
+import Nav from "../components/Nav/nav";
+import Menu from "../components/Nav/menu";
+import Hero from "../components/Hero/hero";
+import Pick from "../components/Pick/pick";
+import Activities from "../components/Activities/activities";
+import Slider from "../components/Slider/slider";
+import Footer from "../components/Footer/footer";
+import Cookie from "../components/Cookie/cookie";
+import "@animated-burgers/burger-slip/dist/styles.css";
+import { useLocalStorage } from "../components/Utils/useLocalStorage";
 
 export async function getStaticProps() {
   const res_dest = await fetch(`https://telturer.herokuapp.com/destinations`);
@@ -28,12 +28,11 @@ export default function Home({ destinations }) {
   const [menuOpen, openMenu] = useState(false);
   const [utilizesNav, useNav] = useState(true);
   const [hideCookie, setHideCookie] = useState(true);
-  const [consent, setConsent] = useLocalStorage('consent', 'undefined');
+  const [consent, setConsent] = useLocalStorage("consent", "undefined");
   return (
     <div className={layout.container}>
       <Head>
         <title>Telturer.no - de beste telt og hengekøye turene i Norge</title>
-        <html lang={'no'} />
         <meta
           name="description"
           content="Teltturer.no gir deg en oversikt over Norges beste steder å sove i naturen. Her finner du de beste telt- og hengekøyeturene i Norge. Planlegg Norgesferien med reisebeskrivelser, parkering og aktiviteter der du skal telte."
@@ -65,7 +64,7 @@ export default function Home({ destinations }) {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
-      {consent === 'consent' && (
+      {consent === "consent" && (
         <>
           <Script
             async
@@ -81,32 +80,32 @@ export default function Home({ destinations }) {
         {!menuOpen ? <Hero /> : null}
         {!menuOpen ? (
           <Slider
-            title={'Nærheten av Oslo'}
-            filter={'city'}
-            keyword={'Oslo'}
+            title={"Nærheten av Oslo"}
+            filter={"city"}
+            keyword={"Oslo"}
             destinations={destinations}
           ></Slider>
         ) : null}
         {!menuOpen ? (
           <Slider
-            title={'De beste turene'}
-            filter={'tags'}
-            keyword={'Langtur'}
+            title={"De beste turene"}
+            filter={"tags"}
+            keyword={"Langtur"}
             destinations={destinations}
           ></Slider>
         ) : null}
         <Pick />
         {!menuOpen ? (
           <Slider
-            title={'Enkelt å parkere'}
-            filter={'tags'}
-            keyword={'Parkering'}
+            title={"Enkelt å parkere"}
+            filter={"tags"}
+            keyword={"Parkering"}
             destinations={destinations}
           ></Slider>
         ) : null}
         <Activities />
         <Footer />
-        {consent === 'undefined' && hideCookie && (
+        {consent === "undefined" && hideCookie && (
           <Cookie setConsent={setConsent} setHideCookie={setHideCookie} />
         )}
       </main>
