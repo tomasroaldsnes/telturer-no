@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import slider from './Slider.module.scss';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
+import Image from "next/image";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import slider from "./Slider.module.scss";
+import "swiper/css";
+import "swiper/css/scrollbar";
 
-import SwiperCore, { Pagination, Mousewheel } from 'swiper';
+import SwiperCore, { Pagination, Mousewheel } from "swiper";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Mousewheel]);
@@ -25,15 +25,15 @@ const shimmer = (w, h) => `
 </svg>`;
 
 const toBase64 = (str) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
 export default function Slider({ title, destinations, filter, keyword }) {
-  if (filter === 'city') {
+  if (filter === "city") {
     destinations = destinations.filter((d) => d.city === keyword);
   }
-  if (filter === 'tags') {
+  if (filter === "tags") {
     destinations = destinations.filter((d) => d.tags.includes(keyword));
   }
   return (
@@ -42,7 +42,7 @@ export default function Slider({ title, destinations, filter, keyword }) {
       <Swiper
         className={slider.swiper}
         spaceBetween={16}
-        direction={'horizontal'}
+        direction={"horizontal"}
         slidesPerView={1.5}
         grabCursor={false}
         mousewheel={{
@@ -70,7 +70,20 @@ export default function Slider({ title, destinations, filter, keyword }) {
       >
         {destinations.map((destination) => (
           <SwiperSlide key={destination.id}>
-            <Link href={'/destinations/' + destination.id}>
+            <Link
+              href={
+                "/destinasjoner/" +
+                destination.id +
+                "/" +
+                destination.title
+                  .toLowerCase()
+                  .replaceAll(" ", "-")
+                  .replaceAll("å", "aa")
+                  .replaceAll("æ", "ae")
+                  .replaceAll("ø", "o")
+                  .toString()
+              }
+            >
               <div className={slider.destination}>
                 <div className={slider.imageContainer}>
                   <Image

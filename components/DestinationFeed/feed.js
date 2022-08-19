@@ -1,19 +1,34 @@
-import Image from 'next/image';
-import { useEffect } from 'react';
-import Link from 'next/link';
-import feed from './Feed.module.scss';
-import Destinations from '../../pages/destinations';
+import Image from "next/image";
+import { useEffect } from "react";
+import Link from "next/link";
+import feed from "./Feed.module.scss";
 
 export default function Feed({ destinations }) {
   let _destinations = destinations;
   for (var i in _destinations) {
     if (_destinations[i].tags)
-      _destinations[i].tags = _destinations[i].tags.replace(new RegExp('\\|', 'g'), '·');
+      _destinations[i].tags = _destinations[i].tags.replace(
+        new RegExp("\\|", "g"),
+        "·"
+      );
   }
   return (
     <div className={feed.container}>
       {_destinations.map((destination) => (
-        <Link href={'/destinations/' + destination.id}>
+        <Link
+          href={
+            "/destinasjoner/" +
+            destination.id +
+            "/" +
+            destination.title
+              .toLowerCase()
+              .replaceAll(" ", "-")
+              .replaceAll("å", "aa")
+              .replaceAll("æ", "ae")
+              .replaceAll("ø", "o")
+              .toString()
+          }
+        >
           <div className={feed.destination}>
             <div className={feed.imageContainer}>
               <Image

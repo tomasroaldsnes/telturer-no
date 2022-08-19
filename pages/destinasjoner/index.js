@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import layout from '../styles/Layout.module.scss';
-import DestinationFeed from '../components/DestinationFeed/feed';
-import AppNav from '../components/AppNav/appnav';
-import { useRouter } from 'next/router';
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import layout from "../../styles/Layout.module.scss";
+import DestinationFeed from "../../components/DestinationFeed/feed";
+import AppNav from "../../components/AppNav/appnav";
+import { useRouter } from "next/router";
 
 export async function getStaticProps() {
   const res_dest = await fetch(`https://telturer.herokuapp.com/destinations`);
@@ -17,11 +17,11 @@ export async function getStaticProps() {
 }
 export default function Destinations({ destinations }) {
   const param = useRouter();
-  const [sort, setSort] = useState('Alle');
+  const [sort, setSort] = useState("Alle");
   const [checkParam, setCheckParam] = useState(true);
   let show_destinations = destinations;
 
-  if (sort != 'Alle') {
+  if (sort != "Alle") {
     show_destinations = destinations.filter((d) => d.tags.includes(sort));
   } else {
     show_destinations = destinations;
@@ -37,23 +37,21 @@ export default function Destinations({ destinations }) {
     }
   }
 
-  console.log(sort);
-
   return (
     <>
       <Head>
         <title>Destinasjoner</title>
         <meta
           name="description"
-          content="De råeste stedene for telt, hengekøye, paddling, sykkeltur, surfing, kano og toppturer i Norge."
+          content="De råeste stedene for teltturer og hengekøyeturer i Norge."
         />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Destinasjoner" />
         <meta
           property="og:description"
-          content="De råeste stedene for telt, hengekøye, paddling, sykkeltur, surfing, kano og toppturer i Norge."
+          content="De råeste stedene for teltturer og hengekøyeturer i Norge."
         />
-        <meta property="og:url" content="https://teltturer.no/destinations" />
+        <meta property="og:url" content="https://teltturer.no/destinasjoner" />
         <meta property="og:type" content="website" />
       </Head>
       <div className={layout.container}>
