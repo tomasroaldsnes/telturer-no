@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 
   const paths = destinations.map((destination) => ({
     params: {
-      slug: destination.slug,
+      slug: destination.slug.toString(),
       id: destination.id.toString(),
     },
   }));
