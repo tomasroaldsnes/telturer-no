@@ -53,6 +53,7 @@ export default function Destinations({ destinations }) {
         />
         <meta property="og:url" content="https://teltturer.no/destinasjoner" />
         <meta property="og:type" content="website" />
+        <html lang="nb" />
       </Head>
       <div className={layout.container}>
         <main>

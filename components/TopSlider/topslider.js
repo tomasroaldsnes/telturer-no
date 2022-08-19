@@ -48,7 +48,7 @@ export default function Slider({ destination }) {
         }}
       >
         {destination.images.map((image) => (
-          <SwiperSlide>
+          <SwiperSlide key={image.id}>
             <div className={slider.imageContainer}>
               <Image
                 src={image.url}

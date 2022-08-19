@@ -43,10 +43,6 @@ export default function Destination({ destination, id, slug }) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content={destination.title} />
         <meta property="og:description" content={destination.description} />
-        <meta
-          property="og:url"
-          content={`https://teltturer.no/destinasjoner/${id}/${slug}`}
-        />
         <meta property="og:type" content="website" />
       </Head>
       <div className={layout.container}>
