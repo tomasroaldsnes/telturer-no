@@ -15,8 +15,11 @@ export async function getStaticPaths() {
         .toLowerCase()
         .toString()
         .replaceAll(" ", "-")
+        .toString()
         .replaceAll("å", "aa")
+        .toString()
         .replaceAll("æ", "ae")
+        .toString()
         .replaceAll("ø", "o"),
       id: destination.id.toString(),
     },
