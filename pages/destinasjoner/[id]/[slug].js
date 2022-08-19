@@ -13,6 +13,7 @@ export async function getStaticPaths() {
       slug: destination.title
         .toString()
         .toLowerCase()
+        .toString()
         .replaceAll(" ", "-")
         .replaceAll("å", "aa")
         .replaceAll("æ", "ae")
