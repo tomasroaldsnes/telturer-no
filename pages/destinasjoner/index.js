@@ -37,14 +37,14 @@ export default function Destinations({ destinations }) {
       setCheckParam(false);
     }
   }
-  useEffect(() => {
+  /* useEffect(() => {
     mixpanel.init(process.env.MIX_PANEL, { debug: true });
-    mixpanel.track("Sign Up", {
+    mixpanel.track("Im", {
       source: "Pat's affiliate site",
       "Opted out of email": true,
     });
     console.log("Mixpanel");
-  });
+  }); */
 
   return (
     <>

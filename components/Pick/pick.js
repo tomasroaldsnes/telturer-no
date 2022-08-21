@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import pick from './Pick.module.scss';
-import button from '../Buttons.module.scss';
-import Link from 'next/link';
+import Image from "next/image";
+import pick from "./Pick.module.scss";
+import button from "../Buttons.module.scss";
+import Link from "next/link";
 
 export default function Pick() {
   return (
@@ -9,20 +9,20 @@ export default function Pick() {
       <div className={pick.imageContainer}>
         <Image
           className={pick.image}
-          src={'/img/winter.jpg'}
-          layout={'fill'}
-          alt={'Trip Name'}
+          src={"/img/picks/shroom.jpg"}
+          layout={"fill"}
+          alt={"Trip Name"}
           objectFit="cover"
           loading="lazy"
         />
       </div>
       <div className={pick.content}>
-        <p className={pick.header}>Vinteridyll?</p>
+        <p className={pick.header}>På jakt etter skogens gull?</p>
         <p className={pick.text}>
-          Skal du på fjellet i vinter? Vi har samlet de beste turene.
+          Vi har laget en samleside for de beste soppturene.
         </p>
-        <Link href={'/destinations?keyword=Topptur'}>
-          <button className={button.primary}>Se destinasjoner</button>
+        <Link href={"/destinations?keyword=Sopptur"}>
+          <button className={button.primary}>Alle soppturer</button>
         </Link>
       </div>
     </div>
