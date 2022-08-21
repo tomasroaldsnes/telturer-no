@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function DestinationContent({ destination }) {
   const tag = destination.tags.replace(new RegExp("\\|", "g"), "·");
-  console.log(destination.description.split(/\r?\n|\r|\n/g));
   return (
     <>
       <div className={content.container}>
