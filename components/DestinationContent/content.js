@@ -13,6 +13,7 @@ export default function DestinationContent({ destination }) {
         <h1 className={content.heading}>{destination.title}</h1>
         <p className={content.tags}>{tag}</p>
         {destination?.description &&
+          destination.description != null &&
           destination.description
             .split(/\r?\n|\r|\n/g)
             .map((paragraphs) => (
