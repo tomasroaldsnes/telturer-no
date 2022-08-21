@@ -56,15 +56,10 @@ export default function Home({ destinations }) {
         <meta property="og:url" content="https://teltturer.no/" />
         <meta property="og:type" content="website" />
         <script
-          dangerouslySetInnerHTML={{
-            __html: `
-               (adsbygoogle = window.adsbygoogle || []).push({
-                   google_ad_client: "ca-pub-1605579254477855",
-                   enable_page_level_ads: true
-              });
-                `,
-          }}
-        />
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1605579254477855"
+          crossorigin="anonymous"
+        ></script>
         <script
           defer
           data-domain="teltturer.no"

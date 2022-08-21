@@ -1,103 +1,98 @@
 @font-face {
-    font-family: Inter;
-    font-weight: 100 900;
-    font-style: normal;
-    font-named-instance: Regular;
-    src: url(./fonts/Inter-Regular.ttf)
-      format("ttf");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: Inter;
-    font-weight: 100 900;
-    font-style: italic;
-    font-named-instance: Italic;
-    src: url(./fonts/Inter-Regular.ttf)
-      format("ttf");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: Inter;
-    font-style: bold;
-    font-named-instance: Bold;
-    src: url(./fonts/Inter-Bold.ttf)
-      format("ttf");
-    font-display: swap;
-  }
+  font-family: Inter;
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: Regular;
+  src: url(./fonts/Inter-Regular.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: Italic;
+  src: url(./fonts/Inter-Regular.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  font-style: bold;
+  font-named-instance: Bold;
+  src: url(./fonts/Inter-Bold.ttf) format("ttf");
+  font-display: swap;
+}
 
 $background-light: #fff;
 $background-dark: rgb(12, 12, 12);
 $primary-white: #fff;
-$primary-black: rgb(12, 12, 12);;
+$primary-black: rgb(12, 12, 12);
 $primary-white: #fff;
-$contrast: #EE3465;
-$gray: rgba(255, 255, 255, .1);
+$accent: #1deb32;
+$gray: rgba(255, 255, 255, 0.1);
 
-$inter: Inter, 'Inter', "Helvetica Neue", Helvetica, sans-serif;
+$inter: Inter, "Inter", "Helvetica Neue", Helvetica, sans-serif;
 
-  /* Breakpoints */
+/* Breakpoints */
 $breakpoints: (
-    "small": (
-      min-width: 601px,
-    ),
-    "medium": (
-      min-width: 768px,
-    ),
-    "large": (
-      min-width: 1025px,
-    ),
-    "x-large": (
-      min-width: 1281px,
-    ),
-  ) !default;
-  
-  @mixin respond-to($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media #{inspect(map-get($breakpoints, $breakpoint))} {
-        @content;
-      }
-    } @else {
-      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  "small": (
+    min-width: 601px,
+  ),
+  "medium": (
+    min-width: 768px,
+  ),
+  "large": (
+    min-width: 1025px,
+  ),
+  "x-large": (
+    min-width: 1281px,
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
     }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
-  
+}
+
+.mobile-dots {
+  display: inline;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+@include respond-to("medium") {
   .mobile-dots {
-    display: inline;
-  }
-  
-  .mobile-hidden {
     display: none;
   }
-  
-  @include respond-to("medium") {
-    .mobile-dots {
-      display: none;
-    }
-    .mobile-hidden {
-      display: block;
-    }
+  .mobile-hidden {
+    display: block;
   }
-  
+}
 
-  /* Accessability helpers */
+/* Accessability helpers */
 @mixin display-flex {
-    display: -ms-flexbox;
-  }
-  
-  @mixin display-flex-row {
-    display: -ms-flexbox;
-    -ms-flex-direction: row;
-  }
-  
-  @mixin display-flex-column {
-    display: -ms-flexbox;
-    -ms-flex-direction: column;
-  }
-  
-  @mixin display-flex-column-center {
-    display: -ms-flexbox;
-    -ms-flex-direction: column;
-    -ms-flex-item-align: center;
-  }
+  display: -ms-flexbox;
+}
 
+@mixin display-flex-row {
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+}
+
+@mixin display-flex-column {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+}
+
+@mixin display-flex-column-center {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-item-align: center;
+}

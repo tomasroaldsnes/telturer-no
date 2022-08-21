@@ -72,6 +72,84 @@
   margin: 0.5em;
 }
 
+.ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2em 0;
+
+  .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  .ratingLevels {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 0.25em;
+  }
+  .ratingLevel {
+    height: 4px;
+    width: 48px;
+    background-color: $primary-black;
+    opacity: 0.2;
+    border-radius: 2px;
+    margin: 0;
+  }
+  .ratingLevelActive {
+    height: 4px;
+    width: 48px;
+    background-color: $accent;
+    border-radius: 2px;
+  }
+  .ratingSlider {
+    height: 4px;
+    width: 142px;
+    background: linear-gradient(to right, $accent 50%, rgb(0, 0, 0, 0.2) 0);
+    border-radius: 2px;
+  }
+
+  span {
+    font-family: $inter;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+    text-align: start;
+    color: $primary-black;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  p {
+    font-family: $inter;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: start;
+    color: $primary-black;
+    margin: 0;
+    max-width: 160px;
+  }
+  h3 {
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: start;
+    color: $primary-black;
+    margin: 0.25em 0;
+  }
+}
+
 .adkomstIcon {
   display: flex;
   flex-direction: row;
