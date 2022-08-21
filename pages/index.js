@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Script from "next/script";
 import layout from "../styles/Layout.module.scss";
 import Nav from "../components/Nav/nav";
@@ -12,6 +12,7 @@ import Footer from "../components/Footer/footer";
 import Cookie from "../components/Cookie/cookie";
 import "@animated-burgers/burger-slip/dist/styles.css";
 import { useLocalStorage } from "../components/Utils/useLocalStorage";
+import mixpanel from "mixpanel-browser";
 
 export async function getStaticProps() {
   const res_dest = await fetch(`https://telturer.herokuapp.com/destinations`);
@@ -29,6 +30,12 @@ export default function Home({ destinations }) {
   const [utilizesNav, useNav] = useState(true);
   const [hideCookie, setHideCookie] = useState(true);
   const [consent, setConsent] = useLocalStorage("consent", "undefined");
+
+  useEffect(() => {
+    mixpanel.init("cca407b6f7e8807e6fdc94b47783867a", { debug: true });
+    mixpanel.track("Sign Up 2");
+  });
+
   return (
     <div className={layout.container}>
       <Head>

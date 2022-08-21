@@ -1,41 +1,87 @@
-@import '../../styles/utils';
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 1rem;
+@import "../../styles/utils";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1rem;
 
-}
-.heading{
+  span {
     font-family: $inter;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
     line-height: 1.5rem;
     text-align: start;
     color: $primary-black;
+    margin: 0;
+  }
 }
-.tags{
-    font-family: $inter;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1rem;
-    margin-top: 0rem;
-    text-align: start;
-    color: $primary-black;
+.heading {
+  font-family: $inter;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: start;
+  color: $primary-black;
 }
-.headingSmall{
-    font-family: $inter;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: start;
-    color: $primary-black;
+.tags {
+  font-family: $inter;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 0rem;
+  text-align: start;
+  color: $primary-black;
 }
-.buttonContainer{
-    margin-top: 1rem;
+.description {
+  font-family: $inter;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: start;
+  color: $primary-black;
+  opacity: 0.7;
+  margin: 0 0 0.5em;
 }
-.instagramContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.headingSmall {
+  font-family: $inter;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: start;
+  color: $primary-black;
+  margin-top: 1em;
+}
+.buttonContainer {
+  margin-top: 1rem;
+}
+.adkomst {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.maps {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin: 0.5em;
+}
+
+.adkomstIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+}
+.instagramContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
