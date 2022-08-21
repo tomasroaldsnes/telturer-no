@@ -6,15 +6,18 @@ import Image from "next/image";
 
 export default function DestinationContent({ destination }) {
   const tag = destination.tags.replace(new RegExp("\\|", "g"), "·");
-  console.log(destination);
+  console.log(destination.description.split(/\r?\n|\r|\n/g));
   return (
     <>
       <div className={content.container}>
         <h1 className={content.heading}>{destination.title}</h1>
         <p className={content.tags}>{tag}</p>
-        {destination?.description && (
-          <p className={content.description}>{destination.description}</p>
-        )}
+        {destination?.description &&
+          destination.description
+            .split(/\r?\n|\r|\n/g)
+            .map((paragraphs) => (
+              <p className={content.description}>{paragraphs}</p>
+            ))}
         {destination?.Adkomst && (
           <>
             <h2 className={content.headingSmall}>Slik kommer du deg dit:</h2>
