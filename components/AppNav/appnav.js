@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import appnav from './Appnav.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
+import Image from "next/image";
+import Link from "next/link";
+import appnav from "./Appnav.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/scrollbar";
 
-import SwiperCore, { Pagination, Mousewheel } from 'swiper';
+import SwiperCore, { Pagination, Mousewheel } from "swiper";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Mousewheel]);
@@ -13,7 +13,7 @@ SwiperCore.use([Pagination, Mousewheel]);
 export default function AppNav({ _sort, _setSort }) {
   return (
     <div className={appnav.container}>
-      <Link href={'/'}>
+      <Link href={"/"}>
         <div className={appnav.icon}>
           <Image src="/back.svg" height={16} width={16}></Image>
         </div>
@@ -22,131 +22,146 @@ export default function AppNav({ _sort, _setSort }) {
         className={appnav.slider}
         spaceBetween={4}
         slidesPerView={4.5}
-        direction={'horizontal'}
+        direction={"horizontal"}
         grabCursor={false}
         mousewheel={{
           releaseOnEdges: true,
           forceToAxis: true,
         }}
       >
-        <SwiperSlide onClick={() => _setSort('Alle')}>
+        <SwiperSlide onClick={() => _setSort("Alle")}>
           <div
-            className={_sort === 'Alle' ? appnav.sortBoxActive : appnav.sortBox}
+            className={_sort === "Alle" ? appnav.sortBoxActive : appnav.sortBox}
           >
-            <p className={_sort === 'Alle' ? appnav.textSelected : appnav.text}>
+            <p className={_sort === "Alle" ? appnav.textSelected : appnav.text}>
               Alle
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Topptur')}>
+        <SwiperSlide onClick={() => _setSort("Topptur")}>
           <div
             className={
-              _sort === 'Topptur' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Topptur" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Topptur' ? appnav.textSelected : appnav.text
+                _sort === "Topptur" ? appnav.textSelected : appnav.text
               }
             >
               Toppturer
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Parkering')}>
+        <SwiperSlide onClick={() => _setSort("Parkering")}>
           <div
             className={
-              _sort === 'Parkering' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Parkering" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Parkering' ? appnav.textSelected : appnav.text
+                _sort === "Parkering" ? appnav.textSelected : appnav.text
               }
             >
               Parkering
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Familie')}>
+        <SwiperSlide onClick={() => _setSort("Familie")}>
           <div
             className={
-              _sort === 'Familie' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Familie" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Familie' ? appnav.textSelected : appnav.text
+                _sort === "Familie" ? appnav.textSelected : appnav.text
               }
             >
               Familie
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Fjelltur')}>
+        <SwiperSlide onClick={() => _setSort("Fjelltur")}>
           <div
             className={
-              _sort === 'Fjelltur' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Fjelltur" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Fjelltur' ? appnav.textSelected : appnav.text
+                _sort === "Fjelltur" ? appnav.textSelected : appnav.text
               }
             >
               Fjelltur
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Sykkel')}>
+        <SwiperSlide onClick={() => _setSort("Sykkel")}>
           <div
             className={
-              _sort === 'Sykkel' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Sykkel" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
-              className={_sort === 'Sykkel' ? appnav.textSelected : appnav.text}
+              className={_sort === "Sykkel" ? appnav.textSelected : appnav.text}
             >
               Sykkel
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Surfing')}>
+        <SwiperSlide onClick={() => _setSort("Sopptur")}>
           <div
             className={
-              _sort === 'Surfing' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Sopptur" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
               className={
-                _sort === 'Surfing' ? appnav.textSelected : appnav.text
+                _sort === "Sopptur" ? appnav.textSelected : appnav.text
+              }
+            >
+              Sopptur
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide onClick={() => _setSort("Surfing")}>
+          <div
+            className={
+              _sort === "Surfing" ? appnav.sortBoxActive : appnav.sortBox
+            }
+          >
+            <p
+              className={
+                _sort === "Surfing" ? appnav.textSelected : appnav.text
               }
             >
               Surfing
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Kajakk')}>
+        <SwiperSlide onClick={() => _setSort("Kajakk")}>
           <div
             className={
-              _sort === 'Kajakk' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Kajakk" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
-              className={_sort === 'Kajakk' ? appnav.textSelected : appnav.text}
+              className={_sort === "Kajakk" ? appnav.textSelected : appnav.text}
             >
               Kajakk
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide onClick={() => _setSort('Perler')}>
+        <SwiperSlide onClick={() => _setSort("Perler")}>
           <div
             className={
-              _sort === 'Perler' ? appnav.sortBoxActive : appnav.sortBox
+              _sort === "Perler" ? appnav.sortBoxActive : appnav.sortBox
             }
           >
             <p
-              className={_sort === 'Perler' ? appnav.textSelected : appnav.text}
+              className={_sort === "Perler" ? appnav.textSelected : appnav.text}
             >
               Perler
             </p>

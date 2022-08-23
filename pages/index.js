@@ -82,17 +82,35 @@ export default function Home({ destinations }) {
         {!menuOpen ? <Hero /> : null}
         {!menuOpen ? (
           <Slider
-            title={"Nærheten av Oslo"}
-            filter={"city"}
-            keyword={"Oslo"}
+            title={"Nylig lagt til"}
+            filter={"latest"}
+            keyword={""}
             destinations={destinations}
           ></Slider>
         ) : null}
         {!menuOpen ? (
           <Slider
-            title={"De beste turene"}
-            filter={"tags"}
-            keyword={"Langtur"}
+            title={"Med kollektiv fra Oslo"}
+            keyword={"Oslo"}
+            shuffle={true}
+            destinations={destinations}
+            transport={"kollektiv"}
+          ></Slider>
+        ) : null}
+        {!menuOpen ? (
+          <Slider
+            title={"Beste for hengekøyer"}
+            filter={"rating"}
+            keyword={"hengefaktor"}
+            destinations={destinations}
+          ></Slider>
+        ) : null}
+        {!menuOpen ? (
+          <Slider
+            title={"Nærheten av Oslo"}
+            filter={"city"}
+            keyword={"Oslo"}
+            shuffle={true}
             destinations={destinations}
           ></Slider>
         ) : null}

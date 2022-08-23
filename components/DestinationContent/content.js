@@ -10,7 +10,7 @@ export default function DestinationContent({ destination }) {
     <>
       <div className={content.container}>
         <h1 className={content.heading}>{destination.title}</h1>
-        <p className={content.tags}>{tag}</p>
+        {tag && <p className={content.tags}>{tag}</p>}
         {destination?.description &&
           destination.description != null &&
           destination.description

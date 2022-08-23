@@ -29,12 +29,75 @@ const toBase64 = (str) =>
     ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
-export default function Slider({ title, destinations, filter, keyword }) {
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+export default function Slider({
+  title,
+  destinations,
+  filter,
+  keyword,
+  shuffle = false,
+  transport = null,
+}) {
+  console.log(destinations);
   if (filter === "city") {
-    destinations = destinations.filter((d) => d.city === keyword);
+    if (shuffle) {
+      destinations = shuffleArray(
+        destinations.filter((d) => d.city === keyword)
+      );
+    } else {
+      destinations = destinations.filter((d) => d.city === keyword);
+    }
+  }
+  if (filter === "rating") {
+    if (keyword === "hengefaktor") {
+      destinations = shuffleArray(
+        destinations.filter((d) => d.Rating?.Hengefaktor >= 7)
+      );
+    }
+  }
+  if (transport === "kollektiv") {
+    if (shuffle) {
+      destinations = shuffleArray(
+        destinations.filter(
+          (d) => d.city === keyword && d.Adkomst.Buss === true
+        )
+      );
+    } else {
+      destinations = destinations.filter(
+        (d) => d.city === keyword && d.Adkomst.Buss === true
+      );
+    }
+  }
+  if (transport === "kollektiv") {
+    if (shuffle) {
+      destinations = shuffleArray(
+        destinations.filter(
+          (d) => d.city === keyword && d.Adkomst.Buss === true
+        )
+      );
+    } else {
+      destinations = destinations.filter(
+        (d) => d.city === keyword && d.Adkomst.Buss === true
+      );
+    }
   }
   if (filter === "tags") {
     destinations = destinations.filter((d) => d.tags.includes(keyword));
+  }
+  if (filter === "latest") {
+    destinations = destinations
+      .sort(
+        (a, b) =>
+          Number(new Date(b.created_at)) - Number(new Date(a.created_at))
+      )
+      .slice(0, 5);
   }
   return (
     <div className={slider.container}>
