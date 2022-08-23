@@ -45,7 +45,6 @@ export default function Slider({
   shuffle = false,
   transport = null,
 }) {
-  console.log(destinations);
   if (filter === "city") {
     if (shuffle) {
       destinations = shuffleArray(
