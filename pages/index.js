@@ -11,6 +11,7 @@ import Slider from "../components/Slider/slider";
 import Footer from "../components/Footer/footer";
 import Cookie from "../components/Cookie/cookie";
 import "@animated-burgers/burger-slip/dist/styles.css";
+import SHARE_IMG from "../public/img/share-screen.jpg";
 import { useLocalStorage } from "../components/Utils/useLocalStorage";
 //import mixpanel from "mixpanel-browser";
 
@@ -50,6 +51,12 @@ export default function Home({ destinations }) {
         />
         <meta property="og:url" content="https://teltturer.no/" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Teltturer.no gir deg en oversikt over Norges beste steder å sove i naturen."
+        />
+        <meta property="og:image" content={SHARE_IMG} />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1605579254477855"

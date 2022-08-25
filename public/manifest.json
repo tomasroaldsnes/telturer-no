@@ -16,14 +16,14 @@
   "description": "Teltturer.no gir deg en oversikt over Norges beste steder å sove i naturen. Her finner du de beste telt- og hengekøyeturene i Norge. Planlegg Norgesferien med reisebeskrivelser, parkering og aktiviteter der du skal telte.",
   "screenshots": [
     {
-      "src": "/img/screenshot1.png",
+      "src": "/img/share-screen.jpg",
       "type": "image/png",
-      "sizes": "3550x1326"
+      "sizes": "600x274"
     },
     {
-      "src": "/img/screenshot2.jpg",
+      "src": "/img/share-screen.jpg",
       "type": "image/jpg",
-      "sizes": "3574x1886"
+      "sizes": "600x274"
     }
   ]
 }
