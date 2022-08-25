@@ -1,34 +1,18 @@
-@import '../../styles/utils';
+@import "../../styles/utils";
 .container {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 80vh;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   align-items: center;
-  background-image: url(../../public/img/cover-small.webp),
-    url(../../public/img/cover-small.jpg);
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   margin-top: -2rem;
   margin-bottom: 0.1rem;
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     height: 90vh;
   }
-}
-
-.overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.091) 11.46%,
-    rgba(0, 0, 0, 0.221) 70.38%,
-    #000000 100%
-  );
-  z-index: 2;
-  height: 100%;
-  width: 100%;
 }
 
 .content {
