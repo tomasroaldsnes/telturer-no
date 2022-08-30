@@ -18,23 +18,28 @@ export default function Footer() {
         <strong className={footer.link}>
           <span>Om Telturer.no</span>
         </strong>
-        <p className={footer.link}>Kontakt</p>
+        <Link href="/om-oss">
+          <a className={footer.link}>Om oss</a>
+        </Link>
+        <Link href="https://tally.so/r/wgDrkN">
+          <a className={footer.link}>Kontakt oss</a>
+        </Link>
+        <Link href="https://tally.so/r/w5B5pM">
+          <a className={footer.link}>Tilbakemelding</a>
+        </Link>
       </div>
       <div className={footer.collection}>
         <strong className={footer.link}>
           <span>Lovligheter</span>
         </strong>
         <Link href="/personvern">
-          <p className={footer.link}>Personvernsærklering</p>
-        </Link>
-        <Link href="/personvern">
-          <p className={footer.link}>Chill på data</p>
+          <a className={footer.link}>Personvernsærklering</a>
         </Link>
       </div>
       <div className={footer.collectionSocial}>
         <Image
           className={footer.social}
-          src={"/img/facebook.svg?1"}
+          src={"/img/facebook.svg"}
           height={48}
           width={48}
           loading={"lazy"}
@@ -42,7 +47,7 @@ export default function Footer() {
         <Link href="https://www.instagram.com/teltturer/" passHref={true}>
           <Image
             className={footer.social}
-            src={"/img/instagram.svg?1"}
+            src={"/img/instagram.svg"}
             height={48}
             width={48}
             loading={"lazy"}

@@ -1,0 +1,39 @@
+@import "../../styles/utils";
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin-top: -2rem;
+  margin-bottom: 0.1rem;
+  @include respond-to("medium") {
+    height: 70vh;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.text {
+  font-family: $inter;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: $primary-white;
+}
