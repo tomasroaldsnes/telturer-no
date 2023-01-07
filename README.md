@@ -1,5 +1,7 @@
 # Telturer.no - Airbnb for camp and tent destinations in Norway
 
+Since I'm no longer maintaining the project, it's now open source under the MIT lisence. Built with Nextjs and Strapi.
+
 ## Getting Started
 
 First, run the development server:
